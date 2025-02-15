@@ -79,7 +79,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/index.php">To-Do List</a>
+        <a class="navbar-brand" href="index.php">To-Do List</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -87,7 +87,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href='/profile.php'>
+                    <a class="nav-link" href='profile.php'>
                         <i class="fa-regular fa-user" style='padding-right: 10px;'></i>
                         <?= $user['name']; ?>
                     </a>
@@ -115,7 +115,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                             <div class="form-group">
                                 <label for="taskDescription">Описание</label>
                                 <textarea class="form-control" id="taskDescription" rows="3"
-                                    placeholder="Введите описание"></textarea>
+                                    placeholder="Введите описание" style='resize: none;'></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="taskStatus">Статус</label>
