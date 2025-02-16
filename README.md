@@ -12,4 +12,4 @@ Tasks created by the user are saved even if the user logs out of the account or 
 
 Technologies: PHP, MySQL, PDO, Bootstrap, jQuery, JavaScript.
 
-You need to create a database todoproj and add a table called users.
+You need to create a database todoproj and add a table called users(column names: id, name, email, password_hash).
