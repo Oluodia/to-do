@@ -21,7 +21,6 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0f8151a53c.js" crossorigin="anonymous"></script>
     <style>
         body {
             background-color: #f8f9fa;
@@ -88,7 +87,6 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href='profile.php'>
-                        <i class="fa-regular fa-user" style='padding-right: 10px;'></i>
                         <?= $user['name']; ?>
                     </a>
                 </li>

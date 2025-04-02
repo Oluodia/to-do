@@ -1,10 +1,9 @@
 <?php
-
 require_once '../config/database.php';
-
 session_start();
-if (isset($_SESSION['user_id'])) {
-	header('Location: ../tasks.php');
+
+if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+	header('Location: tasks.php');
 	exit();
 }
 
@@ -26,7 +25,7 @@ if (isset($_POST['email'])) {
 		try {
 			$stmt = $pdo->prepare("INSERT INTO `users` (`name`, `email`, `password_hash`) VALUES (?, ?, ?)");
 			$stmt->execute([$name, $email, $password_hash]);
-			header('Location: index.php');
+			header('Location: ../index.php');
 		} catch (\Exception $e) {
 			die($e->getMessage());
 		}
@@ -94,7 +93,7 @@ if (isset($_POST['email'])) {
 			<button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
 			</m>
 			<div class="text-center mt-3">
-				<a href="index.php">Уже есть аккаунт? Войти</a>
+				<a href="../index.php">Уже есть аккаунт? Войти</a>
 			</div>
 	</div>
 
